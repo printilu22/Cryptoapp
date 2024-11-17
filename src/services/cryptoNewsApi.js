@@ -5,7 +5,7 @@ const createRequest = (url) => ({ url });
 
 export const cryptoNewsApi = createApi({
   reducerPath: 'cryptoNewsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000/api' }), // Your Node server's base URL
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://cryptoapp-n-backend.onrender.com' }), // Your Node server's base URL
   endpoints: (builder) => ({
     getCryptoNews: builder.query({
       query: ({ newsCategory, count }) => createRequest(`/everything?q=${newsCategory}&pageSize=${count}`),
